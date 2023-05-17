@@ -88,7 +88,7 @@ def diffusion_onglet():
         unsafe_allow_html=True
     )
     with st.form('form1'):
-        with st.container("Radio"):
+        with st.expander("Radio"):
             st.markdown(f"<h2 style='text-align: center;'>Radio</h2>", unsafe_allow_html=True,)
             st.subheader('\n\nQuel genre de musique souhaitez-vous diffuser ?')
             genre_list = list(set([genre.strip() for genres in df_genre_radio['genres'] for genre in genres.split(",")]))
@@ -108,7 +108,7 @@ def diffusion_onglet():
                 st.warning('Aucun diffuseur correspondant à la sélection.')
 
     with st.form('form2'):                
-        with st.container("Online"):
+        with st.expander("Online"):
             st.markdown(f"<h2 style='text-align: center;'>Online</h2>", unsafe_allow_html=True,)
             st.subheader('\n\nSélectionnez un diffuseur streaming :')
             selected_diffuseur = st.selectbox('', list(Avg_Pay_per_Stream.keys()))
@@ -130,7 +130,7 @@ def diffusion_onglet():
                 st.table(distrib_spotify)
             
     with st.form('form3'):
-        with st.container("Vinyles"):
+        with st.expander("Vinyles"):
             st.markdown(f"<h2 style='text-align: center;'>Vinyles</h2>", unsafe_allow_html=True,)
             st.subheader('\n\nSélectionnez un imprimeur de vinyles :')
             imprimeur_input = st.selectbox('', imprimeurs_vinyles)
