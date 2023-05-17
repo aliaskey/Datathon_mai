@@ -84,7 +84,7 @@ def creation_onglet():
 
 def diffusion_onglet():
     st.markdown(
-        f"<h1 style='text-align: center;'>Diffusion</h1>",
+        f"<h1 style='text-align: center;'>Les modes de diffusion des contenus</h1>",
         unsafe_allow_html=True
     )
     with st.form('form1'):
